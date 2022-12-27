@@ -1,0 +1,42 @@
+/*
+Mr.Bob and Mr.Cob are working on a Military Mission. 
+They are supposed to encode the message and send the message to the under-cover team.
+
+Where Cob has written a script. Where the Script says double all the ascii values other than mentioned in the bracket
+(97,101,105,111,117,65,69,73,79,85) and place a '#' in between. 
+
+Help Bob in writing the Code. 
+
+
+Sample Test Case-1
+input = attack the enemy
+output = at#tt#tac#ck#k t#th#he en#nem#my#y*/
+
+import java.util.*;
+public class bob
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        String s=sc.nextLine();
+        String r="";
+        for(int i=0;i<s.length();i++)
+        {
+            if(s.charAt(i)=='A' || s.charAt(i)=='E' || s.charAt(i)=='I' ||s.charAt(i)=='O'|| s.charAt(i)=='U' || s.charAt(i)=='a' || s.charAt(i)=='e'
+            || s.charAt(i)=='i' || s.charAt(i)=='o' || s.charAt(i)=='u')
+            {
+                r=r+s.charAt(i);
+            }
+            else if(s.charAt(i)==' ')
+            {
+                r=r+s.charAt(i);
+            }
+            else
+            {
+                r=r+s.charAt(i)+'#'+s.charAt(i);
+            }
+        }
+        System.out.println(r);
+        
+    }
+}
